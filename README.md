@@ -22,3 +22,6 @@ https://greasyfork.org/zh-CN/
 #### 1.1、安装
 环境：Google Chrome 版本 112.0.5615.49（正式版本） (arm64)
 
+A、通过greasyfork: https://greasyfork.org/zh-CN/scripts/463483-%E7%A0%94%E6%8B%9B%E7%BD%91%E5%8A%A9%E6%89%8B
+
+B、yzchsihelper.js
