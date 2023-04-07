@@ -35,5 +35,8 @@ router.get('/targetInstitution', async (ctx) => {
 app.use(router.routes());
 
 app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`
+Use in https://yz.chsi.com.cn/sytj/tj/qecx.html
+Server running at http://${hostname}:${port}/
+    `);
 });
