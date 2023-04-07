@@ -1,0 +1,22 @@
+{
+  "name": "messager",
+  "version": "1.0.0",
+  "description": "本地koa3 服务器",
+  "main": "index.js",
+  "author": "D1n910 && ChatGPT",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node index.js"
+  },
+  "keywords": [
+    "koa",
+    "koa-router",
+    "server"
+  ],
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "koa": "^3.2.0",
+    "koa-router": "^10.1.1",
+    "path": "^0.12.7"
+  }
+}
