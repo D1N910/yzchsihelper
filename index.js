@@ -1,13 +1,17 @@
 const fs = require('fs');
 const Koa = require('koa');
 const path = require('path');
+const sound = require('sound-play');
 const Router = require('koa-router');
+const Tools = require('./tools.js');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
 const app = new Koa();
 const router = new Router();
+
+Tools.converge();
 
 // 设置跨域
 app.use(async (ctx, next)=> {
@@ -30,6 +34,12 @@ router.get('/targetInstitution', async (ctx) => {
     const jsonData = await fs.promises.readFile(filePath, 'utf-8');
     const data = JSON.parse(jsonData);
     ctx.body = data;
+});
+
+// 播放声音
+router.get('/sound', async (ctx, next) => {
+    const key = ctx.query.key;
+    await sound.play(`./mp3/step${key}.mp3`);
 });
 
 app.use(router.routes());

@@ -6,7 +6,7 @@
   "author": "D1n910 && ChatGPT",
   "license": "MIT",
   "scripts": {
-    "serve": "node converge.js \n node index.js"
+    "serve": "node index.js"
   },
   "keywords": [
     "koa",
