@@ -1,14 +1,17 @@
 const fs = require('fs');
 
-const schoolsStr = `佛山科学技术学院
-北京大学
-清华大学
-深圳大学`;
+// 读取文本文件
+const text = fs.readFileSync('input.txt', 'utf-8');
 
-const schoolsArr = schoolsStr.split('\n').filter(school => school.trim() !== '');
+// 将文本内容转换为数组，过滤重复和无关内容
+const schools = [...new Set(text.match(/([\u4e00-\u9fa5]+(大学|学院|学校))/g))];
 
-const output = {
-  schools: schoolsArr
+// 构造 JSON 格式数据
+const data = {
+  schools: schools
 };
 
-fs.writeFileSync('targetInstitution.json', JSON.stringify(output));
+// 将数据写入 JSON 文件
+fs.writeFileSync('targetInstitution.json', JSON.stringify(data, null, 2));
+
+console.log('数据已成功转换为 JSON 格式并写入文件 output.json');
