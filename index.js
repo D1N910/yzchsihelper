@@ -36,7 +36,7 @@ router.get('/targetInstitution', async (ctx) => {
     ctx.body = data;
 });
 
-// 播放声音
+// 播放声音 todo
 router.get('/sound', async (ctx, next) => {
     const key = ctx.query.key;
     await sound.play(`./mp3/step${key}.mp3`);

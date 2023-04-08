@@ -11,7 +11,7 @@ yarn serve // node index.js
 
 http://127.0.0.1:3000/targetInstitution
 
-可以自行修改 `targetInstitution.json` 内容。
+可以自行修改 `input.txt` 内容。
 
 当然如果您是上北大清华，当我没说（肃然起敬 🫡
 
