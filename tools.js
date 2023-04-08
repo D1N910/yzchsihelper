@@ -16,7 +16,7 @@ const converge = function() {
   // 将数据写入 JSON 文件
   fs.writeFileSync('targetInstitution.json', JSON.stringify(data, null, 2));
 
-  console.log('数据已成功转换为 JSON 格式并写入文件 output.json');
+  console.log('数据已成功转换为 JSON 格式并写入文件 targetInstitution.json');
 }
 module.exports = {
   converge
